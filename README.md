@@ -26,7 +26,7 @@ Run code interactively with Jupyter kernels. Supports Python, R, JavaScript, and
 
 ## Installation
 
-To install `hydrogen-next` search for [hydrogen-next](https://web.pulsar-edit.dev/packages/hydrogen-next) in the Install pane of the Pulsar settings or run `ppm install hydrogen-next`. Alternatively, you can run `ppm install asiloisad/pulsar-hydrogen-next` to install a package directly from the GitHub repository.
+To install `hydrogen-next` search for [hydrogen-next](https://web.pulsar-edit.dev/packages/hydrogen-next) in the Install pane of the Pulsar settings or run `ppm install hydrogen-next`. Alternatively, you can run `ppm install asiloisad-pulsar/hydrogen-next` to install a package directly from the GitHub repository.
 
 ## Commands
 
