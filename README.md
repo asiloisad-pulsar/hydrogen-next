@@ -2,27 +2,27 @@
 
 Run code interactively with Jupyter kernels. Supports Python, R, JavaScript, and other languages with rich output including plots, images, HTML, and LaTeX.
 
-![demo](https://github.com/asiloisad/pulsar-hydrogen-next/blob/master/assets/demo.gif?raw=true)
+![demo](https://github.com/asiloisad-pulsar/hydrogen-next/blob/master/assets/demo.gif?raw=true)
 
 ## Features
 
 - **Interactive execution**: Run lines, selections, or code blocks with inline results.
-- **Rich media output**: Displays plots, images, video, HTML, LaTeX, and more. Ctrl+Click to open images in [image-editor](https://github.com/asiloisad/pulsar-image-editor).
+- **Rich media output**: Displays plots, images, video, HTML, LaTeX, and more. Ctrl+Click to open images in [image-editor](https://github.com/asiloisad-pulsar/image-editor).
 - **Watch expressions**: Auto-run and track variables.
 - **Kernel completions**: Autocomplete powered by the running kernel.
 - **Code introspection**: Inline inspection of objects from the kernel.
 - **Shared namespace**: One kernel per language across files.
 - **Smart code detection**: Intelligently detects Python blocks, brackets, and folds.
 - **Variables**: Browse Python variables in a dedicated panel.
-- **Data explorer**: Inspect DataFrames, arrays, lists, dicts, and objects in a grid, with charts and summaries. Drill into rows holding a nested structure with <kbd>Enter</kbd> or a double-click, and climb back out with <kbd>Backspace</kbd> or the breadcrumb. Searchable with [search-panel](https://github.com/asiloisad/pulsar-search-panel): matching cells are highlighted and Find Next/Previous navigates between them.
+- **Data explorer**: Inspect DataFrames, arrays, lists, dicts, and objects in a grid, with charts and summaries. Drill into rows holding a nested structure with <kbd>Enter</kbd> or a double-click, and climb back out with <kbd>Backspace</kbd> or the breadcrumb. Searchable with [search-panel](https://github.com/asiloisad-pulsar/search-panel): matching cells are highlighted and Find Next/Previous navigates between them.
 - **Exec panel**: Command history with re-execution support.
 - **Multi-cursor support**: Run with multiple cursors and selections.
 - **Custom connections**: Connect to remote kernels (e.g., Docker).
-- **Navigation panel**: Cell markers via [navigation-panel](https://github.com/asiloisad/pulsar-navigation-panel).
-- **Scrollmap**: Cell markers via [scrollmap](https://github.com/asiloisad/pulsar-scrollmap).
-- **Jupyter notebook support**: When [jupyter-next](https://github.com/asiloisad/pulsar-jupyter-next) is installed, the same run/interrupt/restart/shutdown commands also drive cells in `.ipynb` notebooks via the `hydrogen-adapter` service. Output, execution count, and timing are routed back to each notebook cell.
-- **AI integration**: Attach code input and output to [claude-chat](https://github.com/asiloisad/pulsar-claude-chat) for AI-assisted analysis.
-- **Jupyter console launcher**: Open a Jupyter console attached to the active kernel in an embedded [terminal](https://github.com/pulsar-edit/terminal) pane or a system terminal via [terminal-spawn](https://github.com/asiloisad/pulsar-terminal-spawn).
+- **Navigation panel**: Cell markers via [navigation-panel](https://github.com/asiloisad-pulsar/navigation-panel).
+- **Scrollmap**: Cell markers via [scrollmap](https://github.com/asiloisad-pulsar/scrollmap).
+- **Jupyter notebook support**: When [jupyter-next](https://github.com/asiloisad-pulsar/jupyter-next) is installed, the same run/interrupt/restart/shutdown commands also drive cells in `.ipynb` notebooks via the `hydrogen-adapter` service. Output, execution count, and timing are routed back to each notebook cell.
+- **AI integration**: Attach code input and output to [claude-chat](https://github.com/asiloisad-pulsar/claude-chat) for AI-assisted analysis.
+- **Jupyter console launcher**: Open a Jupyter console attached to the active kernel in an embedded [terminal](https://github.com/pulsar-edit/terminal) pane or a system terminal via [terminal-spawn](https://github.com/asiloisad-pulsar/terminal-spawn).
 
 ## Installation
 
@@ -92,7 +92,7 @@ Commands available in `atom-workspace`:
 
 ## Provided Service `search-adapter`
 
-Allows [search-panel](https://github.com/asiloisad/pulsar-search-panel) to search the active Data Explorer pane through the normal buffer find workflow:
+Allows [search-panel](https://github.com/asiloisad-pulsar/search-panel) to search the active Data Explorer pane through the normal buffer find workflow:
 
 - `search-panel:show`, `search-panel:find-next`, and `search-panel:find-previous` search the visible Data Explorer grid instead of the active text editor while the Data Explorer pane is active.
 - Matching cells are highlighted in the canvas grid. The current match uses a stronger highlight and is scrolled into view.
@@ -345,7 +345,7 @@ Click on output results to interact with them:
 | **Click**                           | Copy to clipboard (image or text)            |
 | **Ctrl+Click** (Cmd+Click on macOS) | Open in editor (images open in image-editor) |
 
-Images opened via Ctrl+Click are displayed in the [image-editor](https://github.com/asiloisad/pulsar-image-editor) package with full editing capabilities (zoom, pan, filters, save-as).
+Images opened via Ctrl+Click are displayed in the [image-editor](https://github.com/asiloisad-pulsar/image-editor) package with full editing capabilities (zoom, pan, filters, save-as).
 
 ## Jupyter console launcher
 
@@ -354,7 +354,7 @@ Attach a standalone Jupyter console to the active kernel via its connection file
 Three commands are available:
 
 - `hydrogen-next:open-jupyter-console`: runs the console in an embedded [terminal](https://github.com/pulsar-edit/terminal) pane inside Pulsar (requires the `terminal` package),
-- `hydrogen-next:spawn-jupyter-console`: opens the system terminal and runs the console there (requires the [terminal-spawn](https://github.com/asiloisad/pulsar-terminal-spawn) package),
+- `hydrogen-next:spawn-jupyter-console`: opens the system terminal and runs the console there (requires the [terminal-spawn](https://github.com/asiloisad-pulsar/terminal-spawn) package),
 - `hydrogen-next:copy-jupyter-console-command`: copies the resolved command to the clipboard so you can paste it anywhere (e.g. an SSH session).
 
 Only local kernels are supported (remote kernels have no connection file).
@@ -368,7 +368,7 @@ The command template is configurable via the `Jupyter console command` setting. 
 
 ## Consumed Service `hydrogen-adapter`
 
-Allows non-TextEditor pane items, such as notebooks from [jupyter-next](https://github.com/asiloisad/pulsar-jupyter-next), to be executed through hydrogen-next commands. The adapter owns target enumeration, source retrieval, output persistence, and focus/navigation inside the external pane item.
+Allows non-TextEditor pane items, such as notebooks from [jupyter-next](https://github.com/asiloisad-pulsar/jupyter-next), to be executed through hydrogen-next commands. The adapter owns target enumeration, source retrieval, output persistence, and focus/navigation inside the external pane item.
 
 External packages provide this service in `package.json`:
 

@@ -1,7 +1,7 @@
 {
   "name": "hydrogen-next",
   "description": "Run code interactively with Jupyter kernels",
-  "repository": "https://github.com/asiloisad/pulsar-hydrogen-next",
+  "repository": "https://github.com/asiloisad-pulsar/hydrogen-next",
   "keywords": [
     "execute",
     "run",
