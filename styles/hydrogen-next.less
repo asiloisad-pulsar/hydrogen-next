@@ -185,9 +185,25 @@
 
   // ---------- Multiline Output ------------
 
+  // Percentage-width iframes (e.g. Dash) need full-width flex ancestors.
+  &.marker > .multiline-container:has(.html-output iframe[width$="%"]) {
+    width: 100%;
+    min-width: 0;
+
+    > .toolbar {
+      flex-shrink: 0;
+    }
+  }
+
   .multiline-container {
     display: flex;
     border: solid 1px @base-border-color;
+
+    > .hydrogen_cell_display:has(.html-output iframe[width$="%"]),
+    > .html-output:has(iframe[width$="%"]) {
+      flex: 1;
+      min-width: 0;
+    }
 
     &[hydrogen-wrapoutput="true"] {
       code,
